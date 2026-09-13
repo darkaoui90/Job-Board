@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Déposer une opportunité - MERN 2026/2027</title>
+  <meta name="description" content="Déposez votre offre de stage ou alternance MERN à destination des étudiants de la promotion.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <div class="navbar-container">
+      <div class="nav-brand">
+        <a href="index.html" class="brand-logo">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0112 20.055a11.952 11.952 0 01-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"/></svg>
+          MERN 2026/2027
+        </a>
+      </div>
+
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Offres</a></li>
+          <li>
+            <a href="offres-suivies.html" class="nav-link">
+              Suivies <span class="nav-badge">3</span>
+            </a>
+          </li>
+          <li>
+            <a href="deposer-offre.html" class="nav-link active">
+              <svg style="width:18px;height:18px;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              Déposer
+            </a>
+          </li>
+          <li><a href="admin.html" class="nav-link">Admin</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="btn btn-ghost btn-sm" aria-label="Paramètres">
+          <svg style="width:18px;height:18px;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- Top Recruiter Header Banner -->
+    <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:1.5rem;margin-bottom:1.5rem;">
+      <div>
+        <span class="badge badge-stage" style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:0.375rem;">
+          PORTAIL RECRUTEURS & PARTENAIRES
+        </span>
+        <h1 style="font-size:1.6rem;font-weight:800;margin-top:0.25rem;">Déposer une opportunité</h1>
+        <p style="font-size:0.875rem;color:var(--text-muted);max-width:620px;margin-top:0.25rem;">
+          Partagez un stage ou une alternance avec les étudiants de la promo MERN. Votre offre sera directement examinée par l'équipe pédagogique et indexée au flux étudiant.
+        </p>
+      </div>
+
+      <div class="card" style="padding:0.875rem 1.25rem;background-color:var(--surface);min-width:280px;">
+        <div style="display:flex;justify-content:space-between;font-size:0.75rem;font-weight:600;margin-bottom:0.25rem;">
+          <span style="color:var(--text-muted);">Disponibilité promotion 2026/27</span>
+          <span style="color:var(--success-text);font-weight:700;">84% dispo</span>
+        </div>
+        <div class="progress-bar-track" style="height:6px;margin-bottom:0.5rem;">
+          <div class="progress-fill fill-green" style="width:84%;"></div>
+        </div>
+        <div style="font-size:0.75rem;color:var(--teal-text);display:flex;align-items:center;gap:0.375rem;">
+          <svg style="width:14px;height:14px;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          38 étudiants en recherche active de contrat
+        </div>
+      </div>
+    </div>
+
+    <!-- Multi-Step Offer Submission Form -->
+    <form action="index.html" method="get">
+
+      <!-- Step 1: Informations Entreprise -->
+      <section class="form-section-card">
+        <div class="form-section-header">
+          <div class="step-number">1</div>
+          <div class="step-title">
+            <h2>Informations Entreprise</h2>
+            <p>Présentez votre organisation ou structure d'accueil</p>
+          </div>
+        </div>
+
+        <div class="grid-2col">
+          <div class="form-group">
+            <label for="company_name" class="form-label">Nom de l'entreprise <span class="req">*</span></label>
+            <div class="input-with-icon">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5m0 0h4m-4 0V11m0 0h4m-4 0H9m4 0V5"/></svg>
+              <input type="text" id="company_name" class="input-control" placeholder="Ex. Vercel, Datadog, Qonto..." required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="company_website" class="form-label">Site web ou lien public <span class="req">*</span></label>
+            <div class="input-with-icon">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/></svg>
+              <input type="url" id="company_website" class="input-control" placeholder="https://votre-entreprise.fr" required>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Step 2: Poste & Modalités -->
+      <section class="form-section-card">
+        <div class="form-section-header">
+          <div class="step-number">2</div>
+          <div class="step-title">
+            <h2>Poste & Modalités</h2>
+            <p>Cadre contractuel, intitulé et localisation du stage ou de l'alternance</p>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="offer_title" class="form-label">Titre de l'offre <span class="req">*</span></label>
+          <div class="input-with-icon">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2 2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+            <input type="text" id="offer_title" class="input-control" placeholder="Ex. Développeur Fullstack React / Node.js Junior" required>
+          </div>
+        </div>
+
+        <div class="grid-2col" style="margin-top:1rem;">
+          <div class="form-group">
+            <label class="form-label">Type de contrat <span class="req">*</span></label>
+            <div class="radio-group">
+              <input type="radio" id="contract-stage" name="contract_type" value="stage" class="radio-input-hidden" checked>
+              <label for="contract-stage" class="radio-card-label">
+                Stage <span class="badge badge-stage" style="font-size:0.7rem;">4-6 mois</span>
+              </label>
+
+              <input type="radio" id="contract-alternance" name="contract_type" value="alternance" class="radio-input-hidden">
+              <label for="contract-alternance" class="radio-card-label">
+                Alternance <span class="badge badge-alternance" style="font-size:0.7rem;">12-24 mois</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="location" class="form-label">Ville & Télétravail <span class="req">*</span></label>
+            <div class="input-with-icon">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+              <input type="text" id="location" class="input-control" placeholder="Ex. Paris 11e (Hybride 2j) ou Full Remote" required>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Step 3: Technologies demandées -->
+      <section class="form-section-card">
+        <div class="form-section-header">
+          <div class="step-number">3</div>
+          <div class="step-title">
+            <h2>Technologies demandées</h2>
+            <p>Sélectionnez les briques techniques au cœur du poste</p>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Stack principale (Cliquer pour activer)</label>
+          <div class="selectable-chips">
+            <input type="checkbox" id="t-react" class="chip-checkbox-hidden" checked>
+            <label for="t-react" class="chip-label">React ✓</label>
+
+            <input type="checkbox" id="t-node" class="chip-checkbox-hidden" checked>
+            <label for="t-node" class="chip-label">Node.js ✓</label>
+
+            <input type="checkbox" id="t-mongo" class="chip-checkbox-hidden" checked>
+            <label for="t-mongo" class="chip-label">MongoDB ✓</label>
+
+            <input type="checkbox" id="t-express" class="chip-checkbox-hidden" checked>
+            <label for="t-express" class="chip-label">Express ✓</label>
+
+            <input type="checkbox" id="t-ts" class="chip-checkbox-hidden">
+            <label for="t-ts" class="chip-label">TypeScript</label>
+
+            <input type="checkbox" id="t-next" class="chip-checkbox-hidden">
+            <label for="t-next" class="chip-label">Next.js</label>
+
+            <input type="checkbox" id="t-tailwind" class="chip-checkbox-hidden">
+            <label for="t-tailwind" class="chip-label">Tailwind CSS</label>
+
+            <input type="checkbox" id="t-docker" class="chip-checkbox-hidden">
+            <label for="t-docker" class="chip-label">Docker</label>
+
+            <input type="checkbox" id="t-graphql" class="chip-checkbox-hidden">
+            <label for="t-graphql" class="chip-label">GraphQL</label>
+          </div>
+
+          <div style="display:flex;gap:0.5rem;max-width:400px;margin-top:0.25rem;">
+            <input type="text" class="input-control" placeholder="Ajouter une autre techno (ex. Redis)" style="padding:0.375rem 0.75rem;font-size:0.8125rem;">
+            <button type="button" class="btn btn-outline btn-sm">+ Ajouter</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Step 4: Missions & Profil -->
+      <section class="form-section-card">
+        <div class="form-section-header">
+          <div class="step-number">4</div>
+          <div class="step-title">
+            <h2>Missions & Profil</h2>
+            <p>Décrivez le contexte de l'équipe et les attentes techniques</p>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="mission_desc" class="form-label">Description de la mission et des responsabilités <span class="req">*</span></label>
+          <textarea id="mission_desc" class="input-control" placeholder="Détaillez les chantiers : architecture de micro-services, refonte du frontend, intégration d'API, méthodologie Scrum, mentorat..." required></textarea>
+        </div>
+
+        <div class="form-group" style="margin-top:1rem;">
+          <label for="profile_req" class="form-label">Profil recherché & compétences requises <span class="req">*</span></label>
+          <textarea id="profile_req" class="input-control" placeholder="Ex. Étudiant passionné par l'écosystème JavaScript moderne, bonne maîtrise de Node.js, curiosité pour l'architecture REST/GraphQL, rigueur de test..." required></textarea>
+        </div>
+      </section>
+
+      <!-- Step 5: Modalités de candidature -->
+      <section class="form-section-card">
+        <div class="form-section-header">
+          <div class="step-number">5</div>
+          <div class="step-title">
+            <h2>Modalités de candidature</h2>
+            <p>Canal direct pour recevoir les profils et CVs des étudiants</p>
+          </div>
+        </div>
+
+        <div class="grid-2col">
+          <div class="form-group">
+            <label for="contact_email" class="form-label">Email du contact ou recrutement <span class="req">*</span></label>
+            <div class="input-with-icon">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+              <input type="email" id="contact_email" class="input-control" placeholder="tech-hiring@entreprise.com" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="ats_link" class="form-label">Lien ATS / Formulaire externe <span style="color:var(--text-muted);font-weight:normal;">(optionnel)</span></label>
+            <div class="input-with-icon">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+              <input type="url" id="ats_link" class="input-control" placeholder="https://jobs.lever.co/...">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Bottom Action Footer -->
+      <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;margin-top:1.5rem;margin-bottom:2rem;">
+        <div style="display:flex;align-items:center;gap:0.5rem;font-size:0.8125rem;color:var(--text-muted);">
+          <svg style="width:18px;height:18px;color:var(--success);" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+          Offre vérifiée sous 24h par l'équipe MERN Promo
+        </div>
+
+        <div style="display:flex;gap:0.75rem;">
+          <button type="button" class="btn btn-outline">
+            <svg style="width:16px;height:16px;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
+            Prévisualiser
+          </button>
+          <button type="submit" class="btn btn-primary">
+            <svg style="width:16px;height:16px;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/></svg>
+            Soumettre l'offre
+          </button>
+        </div>
+      </div>
+
+    </form>
+
+  </main>
+
+</body>
+</html>

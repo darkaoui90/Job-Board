@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mes Offres Suivies - MERN 2026/2027</title>
+  <meta name="description" content="Espace candidat local : consultez et gérez vos offres de stage et alternance suivies.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <div class="navbar-container">
+      <div class="nav-brand">
+        <a href="index.html" class="brand-logo">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0112 20.055a11.952 11.952 0 01-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"/></svg>
+          MERN 2026/2027
+        </a>
+      </div>
+
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Offres</a></li>
+          <li>
+            <a href="offres-suivies.html" class="nav-link active">
+              Suivies <span class="nav-badge">3</span>
+            </a>
+          </li>
+          <li><a href="deposer-offre.html" class="nav-link">Déposer</a></li>
+          <li><a href="admin.html" class="nav-link">Admin</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="btn btn-ghost btn-sm" aria-label="Paramètres">
+          <svg style="width:18px;height:18px;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- Top Promotion Placement Stats Bar -->
+    <div class="card" style="margin-bottom:1.5rem; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem; padding:1rem 1.25rem;">
+      <div style="display:flex;align-items:center;gap:1rem;">
+        <div style="width:36px;height:36px;border-radius:var(--radius-md);background-color:var(--teal-bg);color:var(--teal-text);display:flex;align-items:center;justify-content:center;font-weight:700;">
+          <svg style="width:20px;height:20px;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+        </div>
+        <div>
+          <div style="display:flex;align-items:center;gap:0.5rem;font-size:0.8125rem;">
+            <span class="badge badge-teal" style="padding:0.1rem 0.4rem;">Promotion Active</span>
+            <span style="color:var(--text-muted);">Campagne Stage & Alternance</span>
+          </div>
+          <div style="font-size:0.875rem;font-weight:600;margin-top:0.15rem;">
+            Vélocité de placement : <span style="color:var(--primary);">68% de la cohorte placée</span> ou en phase finale d'entretiens
+          </div>
+        </div>
+      </div>
+
+      <div style="display:flex;gap:0.75rem;">
+        <div class="stat-box" style="background-color:var(--border-light);padding:0.375rem 0.75rem;border-radius:var(--radius-md);display:flex;align-items:center;gap:0.375rem;">
+          <span class="dot dot-green"></span>
+          <span style="font-size:0.75rem;font-weight:700;">14</span>
+          <span style="font-size:0.75rem;color:var(--text-muted);">En recherche</span>
+        </div>
+        <div class="stat-box" style="background-color:var(--border-light);padding:0.375rem 0.75rem;border-radius:var(--radius-md);display:flex;align-items:center;gap:0.375rem;">
+          <span class="dot dot-blue"></span>
+          <span style="font-size:0.75rem;font-weight:700;">22</span>
+          <span style="font-size:0.75rem;color:var(--text-muted);">En entretien</span>
+        </div>
+        <div class="stat-box" style="background-color:var(--border-light);padding:0.375rem 0.75rem;border-radius:var(--radius-md);display:flex;align-items:center;gap:0.375rem;">
+          <span class="dot dot-purple"></span>
+          <span style="font-size:0.75rem;font-weight:700;">41</span>
+          <span style="font-size:0.75rem;color:var(--text-muted);">Placés</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Page Title Banner -->
+    <div class="page-title-banner">
+      <div class="sub">
+        <svg style="width:16px;height:16px;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"/></svg>
+        Espace Candidat Local
+      </div>
+      <h1>
+        Mes Offres Suivies
+        <span class="brand-badge" style="font-size:0.8125rem;font-weight:600;">3 offres enregistrées</span>
+      </h1>
+    </div>
+
+    <!-- Storage Info Bar & Actions -->
+    <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;margin-bottom:1.5rem;">
+      <div style="background-color:var(--border-light);border:1px solid var(--border-color);border-radius:var(--radius-md);padding:0.625rem 1rem;font-size:0.8125rem;color:var(--text-muted);display:flex;align-items:center;gap:0.5rem;flex:1;max-width:680px;">
+        <svg style="width:16px;height:16px;color:var(--success);flex-shrink:0;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+        Offres conservées sur ce navigateur (aucun compte requis) — Vos données restent strictement privées sur cet appareil.
+      </div>
+
+      <div style="display:flex;align-items:center;gap:0.75rem;">
+        <select class="custom-select">
+          <option>Récemment ajoutées</option>
+          <option>Par date d'expiration</option>
+        </select>
+        <a href="#" class="btn btn-outline btn-sm">
+          <svg style="width:16px;height:16px;color:var(--text-muted);" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/></svg>
+          Tout effacer
+        </a>
+      </div>
+    </div>
+
+    <!-- Tracked Offers List -->
+    <section class="tracked-list">
+      
+      <!-- Card 1 -->
+      <article class="tracked-card">
+        <div class="tracked-card-top">
+          <div class="tracked-meta">
+            <div style="width:24px;height:24px;border-radius:var(--radius-sm);background-color:var(--primary-light);color:var(--primary);display:flex;align-items:center;justify-content:center;">
+              <svg style="width:14px;height:14px;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2 2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+            </div>
+            <span class="badge badge-alternance">Alternance (12-24 mois)</span>
+            <span>🕒 Ajoutée il y a 2 jours</span>
+            <span class="status-badge">Statut : Candidature prête</span>
+          </div>
+          <a href="#" class="btn btn-ghost btn-sm" style="color:var(--danger-text);">
+            <svg style="width:16px;height:16px;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/></svg>
+            Retirer du suivi
+          </a>
+        </div>
+        <div>
+          <h3 style="font-size:1.1rem;font-weight:700;margin-bottom:0.25rem;">Développeur(se) Fullstack Node.js & React (Next.js)</h3>
+          <p style="font-size:0.8125rem;color:var(--text-muted);">Vanguard Cloud Systems • Paris 09 (Hybride 3j/sem) • Rémunération : 1450€ - 1750€ / mois</p>
+        </div>
+        <div class="tracked-card-bottom">
+          <div class="tech-tags-list">
+            <span class="tech-tag">React 18</span>
+            <span class="tech-tag">Node.js</span>
+            <span class="tech-tag">MongoDB Atlas</span>
+            <span class="tech-tag">TypeScript</span>
+            <span class="tech-tag">Docker</span>
+          </div>
+          <div style="display:flex;gap:0.5rem;">
+            <a href="offre-detail.html" class="btn btn-outline btn-sm">Voir la fiche</a>
+            <a href="offre-detail.html" class="btn btn-primary btn-sm">Postuler maintenant</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 2 -->
+      <article class="tracked-card">
+        <div class="tracked-card-top">
+          <div class="tracked-meta">
+            <div style="width:24px;height:24px;border-radius:var(--radius-sm);background-color:var(--purple-bg);color:var(--purple);display:flex;align-items:center;justify-content:center;">
+              <svg style="width:14px;height:14px;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2 2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+            </div>
+            <span class="badge badge-stage">Stage (6 mois)</span>
+            <span>🕒 Ajoutée hier</span>
+            <span class="status-badge">Statut : À relancer</span>
+          </div>
+          <a href="#" class="btn btn-ghost btn-sm" style="color:var(--danger-text);">
+            <svg style="width:16px;height:16px;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/></svg>
+            Retirer du suivi
+          </a>
+        </div>
+        <div>
+          <h3 style="font-size:1.1rem;font-weight:700;margin-bottom:0.25rem;">Ingénieur Backend Junior MERN & Architecture Événementielle</h3>
+          <p style="font-size:0.8125rem;color:var(--text-muted);">FinPulse API • Lyon Part-Dieu (Full-remote possible) • Gratification : 1200€ / mois + Tickets resto</p>
+        </div>
+        <div class="tracked-card-bottom">
+          <div class="tech-tags-list">
+            <span class="tech-tag">Node.js</span>
+            <span class="tech-tag">Express</span>
+            <span class="tech-tag">Mongoose</span>
+            <span class="tech-tag">RabbitMQ</span>
+            <span class="tech-tag">Jest</span>
+          </div>
+          <div style="display:flex;gap:0.5rem;">
+            <a href="offre-detail.html" class="btn btn-outline btn-sm">Voir la fiche</a>
+            <a href="offre-detail.html" class="btn btn-primary btn-sm">Postuler maintenant</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 3 -->
+      <article class="tracked-card">
+        <div class="tracked-card-top">
+          <div class="tracked-meta">
+            <div style="width:24px;height:24px;border-radius:var(--radius-sm);background-color:var(--teal-bg);color:var(--teal-text);display:flex;align-items:center;justify-content:center;">
+              <svg style="width:14px;height:14px;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2 2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+            </div>
+            <span class="badge badge-alternance">Alternance (12 mois)</span>
+            <span>🕒 Ajoutée il y a 4 jours</span>
+            <span class="status-badge">Statut : Entretien RH prévu</span>
+          </div>
+          <a href="#" class="btn btn-ghost btn-sm" style="color:var(--danger-text);">
+            <svg style="width:16px;height:16px;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/></svg>
+            Retirer du suivi
+          </a>
+        </div>
+        <div>
+          <h3 style="font-size:1.1rem;font-weight:700;margin-bottom:0.25rem;">Frontend Developer React / Redux Toolkit & UI Design System</h3>
+          <p style="font-size:0.8125rem;color:var(--text-muted);">Studio Kraft • Nantes (Centre-ville, 2j télétravail) • Rémunération standardisée convention Syntec</p>
+        </div>
+        <div class="tracked-card-bottom">
+          <div class="tech-tags-list">
+            <span class="tech-tag">React</span>
+            <span class="tech-tag">Redux Toolkit</span>
+            <span class="tech-tag">Tailwind CSS</span>
+            <span class="tech-tag">Node.js API</span>
+          </div>
+          <div style="display:flex;gap:0.5rem;">
+            <a href="offre-detail.html" class="btn btn-outline btn-sm">Voir la fiche</a>
+            <a href="offre-detail.html" class="btn btn-primary btn-sm">Postuler maintenant</a>
+          </div>
+        </div>
+      </article>
+
+    </section>
+
+    <!-- Footer Notice Box -->
+    <section class="card" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;background-color:var(--surface);border-color:var(--border-color);">
+      <div style="display:flex;align-items:flex-start;gap:0.75rem;max-width:750px;">
+        <div style="width:28px;height:28px;border-radius:var(--radius-full);background-color:var(--primary-light);color:var(--primary);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+          <svg style="width:16px;height:16px;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+        </div>
+        <div>
+          <h3 style="font-size:0.875rem;font-weight:700;">Sauvegarde 100% sur votre navigateur (LocalStorage)</h3>
+          <p style="font-size:0.8125rem;color:var(--text-muted);">Si vous effacez vos cookies ou utilisez le mode navigation privée, ces favoris ne seront plus accessibles sur cet ordinateur.</p>
+        </div>
+      </div>
+      <a href="#" class="btn btn-outline btn-sm">
+        Tester vue état vide
+      </a>
+    </section>
+
+  </main>
+
+</body>
+</html>

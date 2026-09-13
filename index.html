@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portail Stages & Alternances - MERN 2026/2027</title>
+  <meta name="description" content="Suivi en temps réel des opportunités de pré-embauche et immersion Full-Stack MERN 2026/2027.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <div class="navbar-container">
+      <div class="nav-brand">
+        <a href="index.html" class="brand-logo">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0112 20.055a11.952 11.952 0 01-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"/></svg>
+          MERN 2026/2027
+        </a>
+        <span class="brand-badge">Promotion Officielle</span>
+      </div>
+
+      <nav>
+        <ul class="nav-menu">
+          <li>
+            <a href="index.html" class="nav-link active">
+              <svg style="width:18px;height:18px;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2 2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+              Offres
+            </a>
+          </li>
+          <li>
+            <a href="offres-suivies.html" class="nav-link">
+              <svg style="width:18px;height:18px;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"/></svg>
+              Suivies
+              <span class="nav-badge">3</span>
+            </a>
+          </li>
+          <li>
+            <a href="deposer-offre.html" class="nav-link">
+              <svg style="width:18px;height:18px;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              Déposer
+            </a>
+          </li>
+          <li>
+            <a href="admin.html" class="nav-link">
+              <svg style="width:18px;height:18px;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+              Admin
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="btn btn-ghost btn-sm" aria-label="Filtres avancés">
+          <svg style="width:18px;height:18px;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"/></svg>
+        </button>
+        <div class="user-avatar" title="Élève Promotion">EP</div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Container -->
+  <main class="container">
+
+    <!-- Telemetry Hero Banner -->
+    <section class="telemetry-banner">
+      <div class="telemetry-header">
+        <div class="telemetry-title-area">
+          <div class="sub-label">
+            <span class="dot dot-teal"></span>
+            <span>Cohort Telemetry Live</span>
+            <span style="color:var(--text-muted); font-weight:normal; margin-left: 0.25rem;">Promo MERN 26/27</span>
+          </div>
+          <h1>Portail Stages & Alternances</h1>
+          <p>Suivi en temps réel des opportunités de pré-embauche et immersion Full-Stack.</p>
+        </div>
+
+        <div class="telemetry-stats">
+          <div class="stat-box">
+            <div class="stat-label">En recherche</div>
+            <div class="stat-value">18</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-label">En entretien</div>
+            <div class="stat-value purple">11</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-label">Placés</div>
+            <div class="stat-value green">14</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="telemetry-progress-container">
+        <div class="telemetry-progress-labels">
+          <span>Vélocité de placement de la cohorte</span>
+          <span style="color:var(--text-main); font-weight:700;">32.5% Placé</span>
+        </div>
+        <div class="progress-bar-track">
+          <div class="progress-fill fill-green" title="Placés (32.5%)"></div>
+          <div class="progress-fill fill-blue" title="En entretien (25%)"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Search & Filter Card -->
+    <section class="filter-card">
+      <form action="#" method="get" onsubmit="return false;">
+        <div class="search-row">
+          <div class="search-input-wrapper">
+            <svg class="search-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+            <input type="text" class="search-input" placeholder="Rechercher par poste, mot-clé, entreprise (ex: React, Scaleway, Backend)...">
+          </div>
+          <button type="reset" class="btn btn-outline">
+            <svg style="width:16px;height:16px;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+            Réinitialiser
+          </button>
+        </div>
+
+        <div class="filter-options-row">
+          <div class="contract-pills">
+            <span class="filter-label">Contrat :</span>
+            
+            <input type="radio" id="c-all" name="contract-filter" class="contract-radio-input" checked>
+            <label for="c-all" class="pill-btn">Tous (14)</label>
+
+            <input type="radio" id="c-stage" name="contract-filter" class="contract-radio-input">
+            <label for="c-stage" class="pill-btn">Stage (6)</label>
+
+            <input type="radio" id="c-alternance" name="contract-filter" class="contract-radio-input">
+            <label for="c-alternance" class="pill-btn">Alternance (8)</label>
+          </div>
+
+          <div class="select-filters">
+            <select class="custom-select">
+              <option value="all">📍 Toutes les villes</option>
+              <option value="Paris">Paris</option>
+              <option value="Lyon">Lyon</option>
+              <option value="Nantes">Nantes</option>
+              <option value="Remote">Remote / Télétravail</option>
+            </select>
+
+            <select class="custom-select">
+              <option value="all">&lt;&gt; Toutes les technos</option>
+              <option value="React">React</option>
+              <option value="Node.js">Node.js</option>
+              <option value="MongoDB">MongoDB</option>
+              <option value="TypeScript">TypeScript</option>
+              <option value="Express">Express</option>
+            </select>
+          </div>
+        </div>
+      </form>
+    </section>
+
+    <!-- Meta Info & Sort Bar -->
+    <div class="results-meta-bar">
+      <div class="results-count">
+        <span style="color:var(--success); margin-right: 0.25rem;">•</span>
+        <strong>14</strong> offres disponibles <span style="color:var(--text-subtle);">pour la promo 2026/2027</span>
+      </div>
+
+      <div class="sort-selector">
+        <span class="sort-label">Trier par :</span>
+        <button type="button" class="sort-opt active">Plus récentes</button>
+        <button type="button" class="sort-opt">Plus anciennes</button>
+      </div>
+    </div>
+
+    <!-- Offers Grid -->
+    <section class="offers-grid">
+
+      <!-- Card 1: Scaleway Cloud -->
+      <article class="offer-card">
+        <div class="offer-header">
+          <div class="company-meta">
+            <div class="company-logo-placeholder">img</div>
+            <div>
+              <h2 class="company-name">Scaleway Cloud</h2>
+              <div class="location-text">📍 Paris (Hybride 3j)</div>
+            </div>
+          </div>
+          <span class="badge badge-alternance">Alternance</span>
+        </div>
+
+        <div>
+          <h3 class="offer-title">Développeur Fullstack MERN – Plateforme Core</h3>
+          <div class="offer-details-row" style="margin-top:0.4rem; margin-bottom:0.6rem;">
+            <span>🕒 Il y a 2 jours</span>
+            <span>•</span>
+            <span>Rythme 3 sem / 1 sem</span>
+          </div>
+          <p class="offer-desc">
+            Intégrez l'équipe Compute pour concevoir les portails d'administration interne. Architecture microservices moderne...
+          </p>
+        </div>
+
+        <div class="tech-tags-list">
+          <span class="tech-tag">React</span>
+          <span class="tech-tag">Node.js</span>
+          <span class="tech-tag">MongoDB</span>
+          <span class="tech-tag">TypeScript</span>
+        </div>
+
+        <div class="offer-card-footer">
+          <input type="checkbox" id="fav-1" class="bookmark-checkbox">
+          <label for="fav-1" class="bookmark-btn" title="Mettre en favori">
+            <svg style="width:18px;height:18px;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"/></svg>
+          </label>
+          <a href="offre-detail.html" class="btn btn-primary btn-sm">
+            Voir l'offre
+            <svg style="width:14px;height:14px;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+          </a>
+        </div>
+      </article>
+
+      <!-- Card 2: DoctoTech Solutions -->
+      <article class="offer-card">
+        <div class="offer-header">
+          <div class="company-meta">
+            <div class="company-logo-placeholder">img</div>
+            <div>
+              <h2 class="company-name">DoctoTech Solutions</h2>
+              <div class="location-text">📍 Lyon (Part-Dieu)</div>
+            </div>
+          </div>
+          <span class="badge badge-stage">Stage</span>
+        </div>
+
+        <div>
+          <h3 class="offer-title">Stage Frontend & BFF – React / Express</h3>
+          <div class="offer-details-row" style="margin-top:0.4rem; margin-bottom:0.6rem;">
+            <span>🕒 Il y a 1 jour</span>
+            <span>•</span>
+            <span>6 mois (Fév - Juil 2026)</span>
+          </div>
+          <p class="offer-desc">
+            Rejoignez notre squad télémédecine pour créer des dashboards praticiens haute réactivité. Focus sur la fluidité d'UI...
+          </p>
+        </div>
+
+        <div class="tech-tags-list">
+          <span class="tech-tag">React</span>
+          <span class="tech-tag">Express</span>
+          <span class="tech-tag">TypeScript</span>
+        </div>
+
+        <div class="offer-card-footer">
+          <input type="checkbox" id="fav-2" class="bookmark-checkbox">
+          <label for="fav-2" class="bookmark-btn" title="Mettre en favori">
+            <svg style="width:18px;height:18px;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"/></svg>
+          </label>
+          <a href="offre-detail.html" class="btn btn-primary btn-sm">
+            Voir l'offre
+            <svg style="width:14px;height:14px;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+          </a>
+        </div>
+      </article>
+
+      <!-- Card 3: PayFlow Analytics -->
+      <article class="offer-card">
+        <div class="offer-header">
+          <div class="company-meta">
+            <div class="company-logo-placeholder">img</div>
+            <div>
+              <h2 class="company-name">PayFlow Analytics</h2>
+              <div class="location-text">📍 100% Télétravail</div>
+            </div>
+          </div>
+          <span class="badge badge-alternance">Alternance</span>
+        </div>
+
+        <div>
+          <h3 class="offer-title">Ingénieur Backend Node.js / MongoDB</h3>
+          <div class="offer-details-row" style="margin-top:0.4rem; margin-bottom:0.6rem;">
+            <span>🕒 Il y a 3 jours</span>
+            <span>•</span>
+            <span>Contrat 24 mois</span>
+          </div>
+          <p class="offer-desc">
+            Optimisation de pipelines d'agrégation MongoDB pour le traitement de flux bancaires temps-réel. Maintenance d'APIs...
+          </p>
+        </div>
+
+        <div class="tech-tags-list">
+          <span class="tech-tag">Node.js</span>
+          <span class="tech-tag">MongoDB</span>
+          <span class="tech-tag">Express</span>
+        </div>
+
+        <div class="offer-card-footer">
+          <input type="checkbox" id="fav-3" class="bookmark-checkbox">
+          <label for="fav-3" class="bookmark-btn" title="Mettre en favori">
+            <svg style="width:18px;height:18px;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"/></svg>
+          </label>
+          <a href="offre-detail.html" class="btn btn-primary btn-sm">
+            Voir l'offre
+            <svg style="width:14px;height:14px;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+          </a>
+        </div>
+      </article>
+
+      <!-- Card 4: GreenPulse Studio -->
+      <article class="offer-card">
+        <div class="offer-header">
+          <div class="company-meta">
+            <div class="company-logo-placeholder">img</div>
+            <div>
+              <h2 class="company-name">GreenPulse Studio</h2>
+              <div class="location-text">📍 Nantes (Île de Nantes)</div>
+            </div>
+          </div>
+          <span class="badge badge-stage">Stage</span>
+        </div>
+
+        <div>
+          <h3 class="offer-title">Stage Développeur MERN – Bilan Carbone SaaS</h3>
+          <div class="offer-details-row" style="margin-top:0.4rem; margin-bottom:0.6rem;">
+            <span>🕒 Il y a 4 jours</span>
+            <span>•</span>
+            <span>6 mois (PFE)</span>
+          </div>
+          <p class="offer-desc">
+            Participation active au sprint de lancement de la v2. Développement de data-visualisations en React et endpoints...
+          </p>
+        </div>
+
+        <div class="tech-tags-list">
+          <span class="tech-tag">React</span>
+          <span class="tech-tag">Node.js</span>
+          <span class="tech-tag">MongoDB</span>
+        </div>
+
+        <div class="offer-card-footer">
+          <input type="checkbox" id="fav-4" class="bookmark-checkbox">
+          <label for="fav-4" class="bookmark-btn" title="Mettre en favori">
+            <svg style="width:18px;height:18px;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"/></svg>
+          </label>
+          <a href="offre-detail.html" class="btn btn-primary btn-sm">
+            Voir l'offre
+            <svg style="width:14px;height:14px;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+          </a>
+        </div>
+      </article>
+
+      <!-- Card 5: Nexus Interactive -->
+      <article class="offer-card">
+        <div class="offer-header">
+          <div class="company-meta">
+            <div class="company-logo-placeholder">img</div>
+            <div>
+              <h2 class="company-name">Nexus Interactive</h2>
+              <div class="location-text">📍 Paris (Sentier)</div>
+            </div>
+          </div>
+          <span class="badge badge-alternance">Alternance</span>
+        </div>
+
+        <div>
+          <h3 class="offer-title">Alternant Web Application Engineer (MERN)</h3>
+          <div class="offer-details-row" style="margin-top:0.4rem; margin-bottom:0.6rem;">
+            <span>🕒 Il y a 5 jours</span>
+            <span>•</span>
+            <span>12 à 24 mois</span>
+          </div>
+          <p class="offer-desc">
+            Construction d'interfaces collaboratives temps réel basées sur WebSockets, React 19 et serveurs Node.js haute scalabilité...
+          </p>
+        </div>
+
+        <div class="tech-tags-list">
+          <span class="tech-tag">React</span>
+          <span class="tech-tag">TypeScript</span>
+          <span class="tech-tag">Express</span>
+        </div>
+
+        <div class="offer-card-footer">
+          <input type="checkbox" id="fav-5" class="bookmark-checkbox">
+          <label for="fav-5" class="bookmark-btn" title="Mettre en favori">
+            <svg style="width:18px;height:18px;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"/></svg>
+          </label>
+          <a href="offre-detail.html" class="btn btn-primary btn-sm">
+            Voir l'offre
+            <svg style="width:14px;height:14px;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+          </a>
+        </div>
+      </article>
+
+      <!-- Card 6: Kalygo Smart Robotics -->
+      <article class="offer-card">
+        <div class="offer-header">
+          <div class="company-meta">
+            <div class="company-logo-placeholder">img</div>
+            <div>
+              <h2 class="company-name">Kalygo Smart Robotics</h2>
+              <div class="location-text">📍 Lyon (Confluence)</div>
+            </div>
+          </div>
+          <span class="badge badge-alternance">Alternance</span>
+        </div>
+
+        <div>
+          <h3 class="offer-title">Apprenti Développeur Logiciel MERN & IoT</h3>
+          <div class="offer-details-row" style="margin-top:0.4rem; margin-bottom:0.6rem;">
+            <span>🕒 Il y a 6 jours</span>
+            <span>•</span>
+            <span>Contrat d'apprentissage</span>
+          </div>
+          <p class="offer-desc">
+            Déploiement d'interfaces d'opérateurs pour le monitoring de flottes d'AGV autonomes. Architecture réactive MERN...
+          </p>
+        </div>
+
+        <div class="tech-tags-list">
+          <span class="tech-tag">React</span>
+          <span class="tech-tag">Node.js</span>
+          <span class="tech-tag">TypeScript</span>
+        </div>
+
+        <div class="offer-card-footer">
+          <input type="checkbox" id="fav-6" class="bookmark-checkbox">
+          <label for="fav-6" class="bookmark-btn" title="Mettre en favori">
+            <svg style="width:18px;height:18px;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"/></svg>
+          </label>
+          <a href="offre-detail.html" class="btn btn-primary btn-sm">
+            Voir l'offre
+            <svg style="width:14px;height:14px;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+          </a>
+        </div>
+      </article>
+
+    </section>
+
+    <!-- Bottom Info CTA Banner -->
+    <section class="cta-banner">
+      <div class="cta-content">
+        <div class="cta-icon">
+          <svg style="width:24px;height:24px;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
+        </div>
+        <div class="cta-text">
+          <h3>Besoin de valider votre fiche de poste ?</h3>
+          <p>Les conventions de stage et contrats d'apprentissage MERN 26/27 doivent inclure au minimum 60% de développement applicatif (React, Node, Express ou Mongo) pour être validés par la direction pédagogique.</p>
+        </div>
+      </div>
+      <a href="#" class="btn btn-outline" style="background-color:white;">
+        <svg style="width:16px;height:16px;color:var(--text-muted);" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+        Consulter le référentiel
+      </a>
+    </section>
+
+  </main>
+
+</body>
+</html>

@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Administration des offres - MERN 2026/2027</title>
+  <meta name="description" content="Tableau de bord d'administration et d'indexation des offres de stage et d'alternance MERN.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <div class="navbar-container">
+      <div class="nav-brand">
+        <a href="index.html" class="brand-logo">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0112 20.055a11.952 11.952 0 01-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"/></svg>
+          MERN 2026/2027
+        </a>
+        <span class="brand-badge" style="background-color:#f1f5f9;color:var(--text-muted);">Console Admin</span>
+      </div>
+
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Offres</a></li>
+          <li>
+            <a href="offres-suivies.html" class="nav-link">
+              Suivies <span class="nav-badge">3</span>
+            </a>
+          </li>
+          <li><a href="deposer-offre.html" class="nav-link">Déposer</a></li>
+          <li>
+            <a href="admin.html" class="nav-link active">
+              <svg style="width:18px;height:18px;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+              Admin
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="btn btn-ghost btn-sm" aria-label="Paramètres">
+          <svg style="width:18px;height:18px;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- Top Telemetry & Actions Header -->
+    <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:1.5rem;margin-bottom:1.25rem;">
+      <div>
+        <span style="font-size:0.7rem;font-weight:700;color:var(--teal-text);text-transform:uppercase;letter-spacing:0.05em;">
+          • TÉLÉMÉTRIE PROMOTION
+        </span>
+        <h1 style="font-size:1.6rem;font-weight:800;margin-top:0.2rem;">Administration des offres</h1>
+        <p style="font-size:0.875rem;color:var(--text-muted);margin-top:0.2rem;">
+          Tableau de bord de publication et indexation directe des opportunités professionnelles MERN.
+        </p>
+      </div>
+
+      <div style="display:flex;align-items:center;gap:0.75rem;">
+        <div style="background-color:var(--border-light);border:1px solid var(--border-color);border-radius:var(--radius-md);padding:0.5rem 0.875rem;font-size:0.8125rem;text-align:right;">
+          <div style="font-weight:700;color:var(--text-main);">14 offres actives</div>
+          <div style="font-size:0.75rem;color:var(--text-muted);">2 archivées</div>
+        </div>
+        <a href="deposer-offre.html" class="btn btn-primary">
+          <svg style="width:16px;height:16px;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
+          + Nouvelle offre
+        </a>
+      </div>
+    </div>
+
+    <!-- System Live Alert -->
+    <div style="background-color:var(--border-light);border:1px solid var(--border-color);border-radius:var(--radius-md);padding:0.75rem 1rem;font-size:0.8125rem;color:var(--text-muted);display:flex;align-items:center;gap:0.625rem;margin-bottom:1.5rem;">
+      <svg style="width:18px;height:18px;color:var(--primary);flex-shrink:0;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+      <div><strong>Information système en direct :</strong> Toute offre supprimée est immédiatement retirée de la liste publique et du flux de recherche des étudiants.</div>
+    </div>
+
+    <!-- Search & Filter Row -->
+    <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;margin-bottom:1.5rem;">
+      <div style="flex:1;max-width:400px;" class="input-with-icon">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+        <input type="text" class="input-control" placeholder="Rechercher par poste, entreprise, stack...">
+      </div>
+
+      <div style="display:flex;align-items:center;gap:0.375rem;background-color:var(--border-light);padding:0.2rem;border-radius:var(--radius-md);font-size:0.8125rem;">
+        <input type="radio" id="adm-all" name="adm-filter" class="contract-radio-input" checked>
+        <label for="adm-all" class="pill-btn" style="padding:0.25rem 0.75rem;">Toutes (16)</label>
+
+        <input type="radio" id="adm-alt" name="adm-filter" class="contract-radio-input">
+        <label for="adm-alt" class="pill-btn" style="padding:0.25rem 0.75rem;">Alternance (11)</label>
+
+        <input type="radio" id="adm-stg" name="adm-filter" class="contract-radio-input">
+        <label for="adm-stg" class="pill-btn" style="padding:0.25rem 0.75rem;">Stage (5)</label>
+      </div>
+    </div>
+
+    <!-- 2 Column Admin Layout -->
+    <div class="admin-layout">
+
+      <!-- Left Column: Manageable Offers List -->
+      <div>
+
+        <!-- Admin Offer Item 1 -->
+        <article class="admin-offer-card">
+          <div style="display:flex;justify-content:space-between;align-items:center;font-size:0.75rem;color:var(--text-muted);">
+            <div style="display:flex;gap:0.5rem;align-items:center;">
+              <span class="badge badge-alternance">Alternance</span>
+              <span>🕒 Publié le 18 Mars 2026</span>
+            </div>
+            <span style="font-family:monospace;background-color:var(--border-light);padding:0.1rem 0.4rem;border-radius:var(--radius-sm);">ID: OFF-8491</span>
+          </div>
+
+          <div>
+            <h3 style="font-size:1.1rem;font-weight:700;">Développeur Fullstack React / Node.js</h3>
+            <div style="font-size:0.8125rem;color:var(--text-muted);margin-top:0.2rem;">
+              🏢 <strong>Payfit France</strong> • Paris / Télétravail partiel
+            </div>
+          </div>
+
+          <div>
+            <div style="font-size:0.75rem;color:var(--text-muted);margin-bottom:0.25rem;">Technologies associées :</div>
+            <div class="tech-tags-list">
+              <span class="tech-tag">React 19</span>
+              <span class="tech-tag">Node.js</span>
+              <span class="tech-tag">Express</span>
+              <span class="tech-tag">MongoDB</span>
+              <span class="tech-tag">Docker</span>
+            </div>
+          </div>
+
+          <div class="admin-card-actions">
+            <div style="display:flex;align-items:center;gap:0.375rem;color:var(--success-text);font-weight:600;">
+              <span class="dot dot-green"></span> En ligne (8 candidatures)
+            </div>
+            <div class="admin-buttons">
+              <a href="#" class="btn btn-outline btn-sm">
+                <svg style="width:14px;height:14px;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"/></svg>
+                Modifier
+              </a>
+              <a href="#" class="btn btn-outline btn-sm" style="background-color:var(--primary-light);color:var(--primary);border-color:var(--primary-border);">
+                <svg style="width:14px;height:14px;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"/></svg>
+                Gérer les technos
+              </a>
+              <a href="#" class="btn btn-danger btn-sm">
+                <svg style="width:14px;height:14px;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/></svg>
+                Supprimer
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Admin Offer Item 2 -->
+        <article class="admin-offer-card">
+          <div style="display:flex;justify-content:space-between;align-items:center;font-size:0.75rem;color:var(--text-muted);">
+            <div style="display:flex;gap:0.5rem;align-items:center;">
+              <span class="badge badge-stage">Stage</span>
+              <span>🕒 Publié le 16 Mars 2026</span>
+            </div>
+            <span style="font-family:monospace;background-color:var(--border-light);padding:0.1rem 0.4rem;border-radius:var(--radius-sm);">ID: OFF-8488</span>
+          </div>
+
+          <div>
+            <h3 style="font-size:1.1rem;font-weight:700;">Ingénieur Backend Node.js / Microservices</h3>
+            <div style="font-size:0.8125rem;color:var(--text-muted);margin-top:0.2rem;">
+              🏢 <strong>DataStax Labs</strong> • Nantes / Hybride
+            </div>
+          </div>
+
+          <div>
+            <div style="font-size:0.75rem;color:var(--text-muted);margin-bottom:0.25rem;">Technologies associées :</div>
+            <div class="tech-tags-list">
+              <span class="tech-tag">Node.js</span>
+              <span class="tech-tag">MongoDB Atlas</span>
+              <span class="tech-tag">GraphQL</span>
+              <span class="tech-tag">Jest</span>
+            </div>
+          </div>
+
+          <div class="admin-card-actions">
+            <div style="display:flex;align-items:center;gap:0.375rem;color:var(--success-text);font-weight:600;">
+              <span class="dot dot-green"></span> En ligne (4 candidatures)
+            </div>
+            <div class="admin-buttons">
+              <a href="#" class="btn btn-outline btn-sm">Modifier</a>
+              <a href="#" class="btn btn-outline btn-sm" style="background-color:var(--primary-light);color:var(--primary);border-color:var(--primary-border);">Gérer les technos</a>
+              <a href="#" class="btn btn-danger btn-sm">Supprimer</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Admin Offer Item 3 -->
+        <article class="admin-offer-card">
+          <div style="display:flex;justify-content:space-between;align-items:center;font-size:0.75rem;color:var(--text-muted);">
+            <div style="display:flex;gap:0.5rem;align-items:center;">
+              <span class="badge badge-alternance">Alternance</span>
+              <span>🕒 Publié le 12 Mars 2026</span>
+            </div>
+            <span style="font-family:monospace;background-color:var(--border-light);padding:0.1rem 0.4rem;border-radius:var(--radius-sm);">ID: OFF-8460</span>
+          </div>
+
+          <div>
+            <h3 style="font-size:1.1rem;font-weight:700;">Front-end Engineer MERN – Design Systems</h3>
+            <div style="font-size:0.8125rem;color:var(--text-muted);margin-top:0.2rem;">
+              🏢 <strong>Qonto</strong> • Paris / 100% Présentiel
+            </div>
+          </div>
+
+          <div>
+            <div style="font-size:0.75rem;color:var(--text-muted);margin-bottom:0.25rem;">Technologies associées :</div>
+            <div class="tech-tags-list">
+              <span class="tech-tag">React</span>
+              <span class="tech-tag">TypeScript</span>
+              <span class="tech-tag">TailwindCSS</span>
+              <span class="tech-tag">Storybook</span>
+            </div>
+          </div>
+
+          <div class="admin-card-actions">
+            <div style="display:flex;align-items:center;gap:0.375rem;color:var(--success-text);font-weight:600;">
+              <span class="dot dot-green"></span> En ligne (11 candidatures)
+            </div>
+            <div class="admin-buttons">
+              <a href="#" class="btn btn-outline btn-sm">Modifier</a>
+              <a href="#" class="btn btn-outline btn-sm" style="background-color:var(--primary-light);color:var(--primary);border-color:var(--primary-border);">Gérer les technos</a>
+              <a href="#" class="btn btn-danger btn-sm">Supprimer</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- Right Column: Quick Tech Editing Drawer / Panel -->
+      <aside>
+        <div class="card" style="position:sticky;top:80px;">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1rem;">
+            <h2 style="font-size:1rem;font-weight:700;display:flex;align-items:center;gap:0.5rem;">
+              <svg style="width:18px;height:18px;color:var(--primary);" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"/></svg>
+              Édition rapide des technos
+            </h2>
+            <span class="badge badge-stage" style="font-size:0.7rem;">Actif</span>
+          </div>
+
+          <div style="background-color:var(--border-light);border-radius:var(--radius-md);padding:0.75rem;margin-bottom:1rem;font-size:0.8125rem;">
+            <div style="color:var(--text-muted);font-size:0.75rem;margin-bottom:0.15rem;">Offre sélectionnée :</div>
+            <strong style="color:var(--text-main);display:block;">Développeur Fullstack React / Node.js</strong>
+            <span style="color:var(--text-muted);font-size:0.75rem;">Payfit France</span>
+          </div>
+
+          <div style="margin-bottom:1rem;">
+            <div style="font-size:0.75rem;font-weight:600;color:var(--text-muted);margin-bottom:0.5rem;">Associer ou retirer des briques technologiques :</div>
+            <div class="selectable-chips">
+              <input type="checkbox" id="adm-r" class="chip-checkbox-hidden" checked>
+              <label for="adm-r" class="chip-label">React ✓</label>
+
+              <input type="checkbox" id="adm-n" class="chip-checkbox-hidden" checked>
+              <label for="adm-n" class="chip-label">Node.js ✓</label>
+
+              <input type="checkbox" id="adm-m" class="chip-checkbox-hidden" checked>
+              <label for="adm-m" class="chip-label">MongoDB ✓</label>
+
+              <input type="checkbox" id="adm-e" class="chip-checkbox-hidden" checked>
+              <label for="adm-e" class="chip-label">Express ✓</label>
+
+              <input type="checkbox" id="adm-ts" class="chip-checkbox-hidden">
+              <label for="adm-ts" class="chip-label">TypeScript +</label>
+
+              <input type="checkbox" id="adm-dk" class="chip-checkbox-hidden">
+              <label for="adm-dk" class="chip-label">Docker +</label>
+
+              <input type="checkbox" id="adm-gq" class="chip-checkbox-hidden">
+              <label for="adm-gq" class="chip-label">GraphQL +</label>
+
+              <input type="checkbox" id="adm-tw" class="chip-checkbox-hidden">
+              <label for="adm-tw" class="chip-label">TailwindCSS +</label>
+
+              <input type="checkbox" id="adm-pg" class="chip-checkbox-hidden">
+              <label for="adm-pg" class="chip-label">PostgreSQL +</label>
+            </div>
+          </div>
+
+          <div style="margin-bottom:1.25rem;">
+            <div style="font-size:0.75rem;font-weight:600;color:var(--text-muted);margin-bottom:0.375rem;">Ajouter une nouvelle techno spécifique :</div>
+            <div style="display:flex;gap:0.375rem;">
+              <input type="text" class="input-control" placeholder="ex: Redis, AWS Lambda..." style="padding:0.375rem 0.625rem;font-size:0.8125rem;">
+              <button type="button" class="btn btn-outline btn-sm">Ajouter</button>
+            </div>
+          </div>
+
+          <button type="button" class="btn btn-primary" style="width:100%;">
+            Enregistrer l'indexation
+          </button>
+
+          <div style="text-align:center;margin-top:0.75rem;">
+            <a href="#" style="font-size:0.75rem;color:var(--text-muted);text-decoration:underline;">Réinitialiser les tags</a>
+          </div>
+        </div>
+      </aside>
+
+    </div>
+
+  </main>
+
+</body>
+</html>
