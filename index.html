@@ -26,7 +26,7 @@
       <nav>
         <ul class="nav-menu">
           <li>
-            <a href="index.html" class="nav-link active">
+            <a href="index.html" class="nav-link active" aria-current="page">
               <svg style="width:18px;height:18px;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2 2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
               Offres
             </a>
@@ -108,11 +108,11 @@
 
     <!-- Search & Filter Card -->
     <section class="filter-card">
-      <form action="#" method="get" onsubmit="return false;">
+      <form action="#" method="get" aria-label="Rechercher et filtrer les offres">
         <div class="search-row">
           <div class="search-input-wrapper">
             <svg class="search-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
-            <input type="text" class="search-input" placeholder="Rechercher par poste, mot-clé, entreprise (ex: React, Scaleway, Backend)...">
+            <input type="search" name="q" class="search-input" aria-label="Rechercher une offre" placeholder="Rechercher par poste, mot-clé, entreprise (ex: React, Scaleway, Backend)...">
           </div>
           <button type="reset" class="btn btn-outline">
             <svg style="width:16px;height:16px;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
@@ -135,7 +135,7 @@
           </div>
 
           <div class="select-filters">
-            <select class="custom-select">
+            <select name="location" class="custom-select" aria-label="Filtrer par ville">
               <option value="all">📍 Toutes les villes</option>
               <option value="Paris">Paris</option>
               <option value="Lyon">Lyon</option>
@@ -143,7 +143,7 @@
               <option value="Remote">Remote / Télétravail</option>
             </select>
 
-            <select class="custom-select">
+            <select name="technology" class="custom-select" aria-label="Filtrer par technologie">
               <option value="all">&lt;&gt; Toutes les technos</option>
               <option value="React">React</option>
               <option value="Node.js">Node.js</option>
