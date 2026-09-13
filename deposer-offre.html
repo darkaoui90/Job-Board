@@ -78,7 +78,7 @@
     </div>
 
     <!-- Multi-Step Offer Submission Form -->
-    <form action="index.html" method="get">
+    <form action="index.html" method="get" aria-label="Déposer une offre">
 
       <!-- Step 1: Informations Entreprise -->
       <section class="form-section-card">
@@ -95,7 +95,7 @@
             <label for="company_name" class="form-label">Nom de l'entreprise <span class="req">*</span></label>
             <div class="input-with-icon">
               <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5m0 0h4m-4 0V11m0 0h4m-4 0H9m4 0V5"/></svg>
-              <input type="text" id="company_name" class="input-control" placeholder="Ex. Vercel, Datadog, Qonto..." required>
+              <input type="text" id="company_name" name="company_name" class="input-control" placeholder="Ex. Vercel, Datadog, Qonto..." required>
             </div>
           </div>
 
@@ -103,7 +103,7 @@
             <label for="company_website" class="form-label">Site web ou lien public <span class="req">*</span></label>
             <div class="input-with-icon">
               <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/></svg>
-              <input type="url" id="company_website" class="input-control" placeholder="https://votre-entreprise.fr" required>
+              <input type="url" id="company_website" name="company_website" class="input-control" placeholder="https://votre-entreprise.fr" required>
             </div>
           </div>
         </div>
@@ -123,7 +123,7 @@
           <label for="offer_title" class="form-label">Titre de l'offre <span class="req">*</span></label>
           <div class="input-with-icon">
             <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2 2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
-            <input type="text" id="offer_title" class="input-control" placeholder="Ex. Développeur Fullstack React / Node.js Junior" required>
+            <input type="text" id="offer_title" name="offer_title" class="input-control" placeholder="Ex. Développeur Fullstack React / Node.js Junior" required>
           </div>
         </div>
 
@@ -131,12 +131,12 @@
           <div class="form-group">
             <label class="form-label">Type de contrat <span class="req">*</span></label>
             <div class="radio-group">
-              <input type="radio" id="contract-stage" name="contract_type" value="stage" class="radio-input-hidden" checked>
+              <input type="radio" id="contract-stage" name="contract-stage" name="contract_type" value="stage" class="radio-input-hidden" checked>
               <label for="contract-stage" class="radio-card-label">
                 Stage <span class="badge badge-stage" style="font-size:0.7rem;">4-6 mois</span>
               </label>
 
-              <input type="radio" id="contract-alternance" name="contract_type" value="alternance" class="radio-input-hidden">
+              <input type="radio" id="contract-alternance" name="contract-alternance" name="contract_type" value="alternance" class="radio-input-hidden">
               <label for="contract-alternance" class="radio-card-label">
                 Alternance <span class="badge badge-alternance" style="font-size:0.7rem;">12-24 mois</span>
               </label>
@@ -147,7 +147,7 @@
             <label for="location" class="form-label">Ville & Télétravail <span class="req">*</span></label>
             <div class="input-with-icon">
               <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
-              <input type="text" id="location" class="input-control" placeholder="Ex. Paris 11e (Hybride 2j) ou Full Remote" required>
+              <input type="text" id="location" name="location" class="input-control" placeholder="Ex. Paris 11e (Hybride 2j) ou Full Remote" required>
             </div>
           </div>
         </div>
@@ -166,36 +166,36 @@
         <div class="form-group">
           <label class="form-label">Stack principale (Cliquer pour activer)</label>
           <div class="selectable-chips">
-            <input type="checkbox" id="t-react" class="chip-checkbox-hidden" checked>
+            <input type="checkbox" id="t-react" name="t-react" class="chip-checkbox-hidden" checked>
             <label for="t-react" class="chip-label">React ✓</label>
 
-            <input type="checkbox" id="t-node" class="chip-checkbox-hidden" checked>
+            <input type="checkbox" id="t-node" name="t-node" class="chip-checkbox-hidden" checked>
             <label for="t-node" class="chip-label">Node.js ✓</label>
 
-            <input type="checkbox" id="t-mongo" class="chip-checkbox-hidden" checked>
+            <input type="checkbox" id="t-mongo" name="t-mongo" class="chip-checkbox-hidden" checked>
             <label for="t-mongo" class="chip-label">MongoDB ✓</label>
 
-            <input type="checkbox" id="t-express" class="chip-checkbox-hidden" checked>
+            <input type="checkbox" id="t-express" name="t-express" class="chip-checkbox-hidden" checked>
             <label for="t-express" class="chip-label">Express ✓</label>
 
-            <input type="checkbox" id="t-ts" class="chip-checkbox-hidden">
+            <input type="checkbox" id="t-ts" name="t-ts" class="chip-checkbox-hidden">
             <label for="t-ts" class="chip-label">TypeScript</label>
 
-            <input type="checkbox" id="t-next" class="chip-checkbox-hidden">
+            <input type="checkbox" id="t-next" name="t-next" class="chip-checkbox-hidden">
             <label for="t-next" class="chip-label">Next.js</label>
 
-            <input type="checkbox" id="t-tailwind" class="chip-checkbox-hidden">
+            <input type="checkbox" id="t-tailwind" name="t-tailwind" class="chip-checkbox-hidden">
             <label for="t-tailwind" class="chip-label">Tailwind CSS</label>
 
-            <input type="checkbox" id="t-docker" class="chip-checkbox-hidden">
+            <input type="checkbox" id="t-docker" name="t-docker" class="chip-checkbox-hidden">
             <label for="t-docker" class="chip-label">Docker</label>
 
-            <input type="checkbox" id="t-graphql" class="chip-checkbox-hidden">
+            <input type="checkbox" id="t-graphql" name="t-graphql" class="chip-checkbox-hidden">
             <label for="t-graphql" class="chip-label">GraphQL</label>
           </div>
 
           <div style="display:flex;gap:0.5rem;max-width:400px;margin-top:0.25rem;">
-            <input type="text" class="input-control" placeholder="Ajouter une autre techno (ex. Redis)" style="padding:0.375rem 0.75rem;font-size:0.8125rem;">
+            <input type="text" name="other_technology" class="input-control" aria-label="Autre technologie" placeholder="Ajouter une autre techno (ex. Redis)" style="padding:0.375rem 0.75rem;font-size:0.8125rem;">
             <button type="button" class="btn btn-outline btn-sm">+ Ajouter</button>
           </div>
         </div>
@@ -213,12 +213,12 @@
 
         <div class="form-group">
           <label for="mission_desc" class="form-label">Description de la mission et des responsabilités <span class="req">*</span></label>
-          <textarea id="mission_desc" class="input-control" placeholder="Détaillez les chantiers : architecture de micro-services, refonte du frontend, intégration d'API, méthodologie Scrum, mentorat..." required></textarea>
+          <textarea id="mission_desc" name="mission_desc" class="input-control" placeholder="Détaillez les chantiers : architecture de micro-services, refonte du frontend, intégration d'API, méthodologie Scrum, mentorat..." required></textarea>
         </div>
 
         <div class="form-group" style="margin-top:1rem;">
           <label for="profile_req" class="form-label">Profil recherché & compétences requises <span class="req">*</span></label>
-          <textarea id="profile_req" class="input-control" placeholder="Ex. Étudiant passionné par l'écosystème JavaScript moderne, bonne maîtrise de Node.js, curiosité pour l'architecture REST/GraphQL, rigueur de test..." required></textarea>
+          <textarea id="profile_req" name="profile_req" class="input-control" placeholder="Ex. Étudiant passionné par l'écosystème JavaScript moderne, bonne maîtrise de Node.js, curiosité pour l'architecture REST/GraphQL, rigueur de test..." required></textarea>
         </div>
       </section>
 
@@ -237,7 +237,7 @@
             <label for="contact_email" class="form-label">Email du contact ou recrutement <span class="req">*</span></label>
             <div class="input-with-icon">
               <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
-              <input type="email" id="contact_email" class="input-control" placeholder="tech-hiring@entreprise.com" required>
+              <input type="email" id="contact_email" name="contact_email" class="input-control" placeholder="tech-hiring@entreprise.com" required>
             </div>
           </div>
 
@@ -245,7 +245,7 @@
             <label for="ats_link" class="form-label">Lien ATS / Formulaire externe <span style="color:var(--text-muted);font-weight:normal;">(optionnel)</span></label>
             <div class="input-with-icon">
               <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
-              <input type="url" id="ats_link" class="input-control" placeholder="https://jobs.lever.co/...">
+              <input type="url" id="ats_link" name="ats_link" class="input-control" placeholder="https://jobs.lever.co/...">
             </div>
           </div>
         </div>

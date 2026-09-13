@@ -1322,3 +1322,52 @@ textarea.input-control {
     flex-direction: column;
   }
 }
+
+/* Accessibilité clavier et adaptation aux très petits écrans */
+:where(a, button, input, select, textarea, label[for]):focus-visible {
+  outline: 3px solid var(--primary);
+  outline-offset: 3px;
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+
+  .search-row,
+  .filter-options-row,
+  .select-filters,
+  .results-meta-bar,
+  .tracked-card-bottom,
+  .sticky-bottom-bar {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .contract-pills {
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .custom-select,
+  .search-row .btn,
+  .sticky-bottom-bar .btn {
+    width: 100%;
+  }
+
+  .telemetry-stats {
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .form-section-card,
+  .offer-card,
+  .tracked-card {
+    padding: 1rem;
+  }
+
+  .sticky-bottom-bar {
+    position: static;
+  }
+}
