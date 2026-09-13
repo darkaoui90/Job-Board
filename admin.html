@@ -85,7 +85,7 @@
     <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;margin-bottom:1.5rem;">
       <div style="flex:1;max-width:400px;" class="input-with-icon">
         <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
-        <input type="text" class="input-control" placeholder="Rechercher par poste, entreprise, stack...">
+        <input type="search" name="admin_search" class="input-control" aria-label="Rechercher une offre à administrer" placeholder="Rechercher par poste, entreprise, stack...">
       </div>
 
       <div style="display:flex;align-items:center;gap:0.375rem;background-color:var(--border-light);padding:0.2rem;border-radius:var(--radius-md);font-size:0.8125rem;">
@@ -287,7 +287,7 @@
           <div style="margin-bottom:1.25rem;">
             <div style="font-size:0.75rem;font-weight:600;color:var(--text-muted);margin-bottom:0.375rem;">Ajouter une nouvelle techno spécifique :</div>
             <div style="display:flex;gap:0.375rem;">
-              <input type="text" class="input-control" placeholder="ex: Redis, AWS Lambda..." style="padding:0.375rem 0.625rem;font-size:0.8125rem;">
+              <input type="text" name="admin_technology" class="input-control" aria-label="Ajouter une technologie" placeholder="ex: Redis, AWS Lambda..." style="padding:0.375rem 0.625rem;font-size:0.8125rem;">
               <button type="button" class="btn btn-outline btn-sm">Ajouter</button>
             </div>
           </div>
