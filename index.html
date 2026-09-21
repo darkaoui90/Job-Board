@@ -35,7 +35,7 @@
             <a href="offres-suivies.html" class="nav-link">
               <svg style="width:18px;height:18px;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"/></svg>
               Suivies
-              <span class="nav-badge">3</span>
+              <span class="nav-badge" data-followed-count>0</span>
             </a>
           </li>
           <li>
@@ -124,13 +124,13 @@
           <div class="contract-pills">
             <span class="filter-label">Contrat :</span>
             
-            <input type="radio" id="c-all" name="contract-filter" class="contract-radio-input" checked>
+            <input type="radio" id="c-all" name="contract-filter" value="all" class="contract-radio-input" checked>
             <label for="c-all" class="pill-btn">Tous (14)</label>
 
-            <input type="radio" id="c-stage" name="contract-filter" class="contract-radio-input">
+            <input type="radio" id="c-stage" name="contract-filter" value="Stage" class="contract-radio-input">
             <label for="c-stage" class="pill-btn">Stage (6)</label>
 
-            <input type="radio" id="c-alternance" name="contract-filter" class="contract-radio-input">
+            <input type="radio" id="c-alternance" name="contract-filter" value="Alternance" class="contract-radio-input">
             <label for="c-alternance" class="pill-btn">Alternance (8)</label>
           </div>
 
@@ -170,269 +170,8 @@
       </div>
     </div>
 
-    <!-- Offers Grid -->
-    <section class="offers-grid">
-
-      <!-- Card 1: Scaleway Cloud -->
-      <article class="offer-card">
-        <div class="offer-header">
-          <div class="company-meta">
-            <div class="company-logo-placeholder">img</div>
-            <div>
-              <h2 class="company-name">Scaleway Cloud</h2>
-              <div class="location-text">📍 Paris (Hybride 3j)</div>
-            </div>
-          </div>
-          <span class="badge badge-alternance">Alternance</span>
-        </div>
-
-        <div>
-          <h3 class="offer-title">Développeur Fullstack MERN – Plateforme Core</h3>
-          <div class="offer-details-row" style="margin-top:0.4rem; margin-bottom:0.6rem;">
-            <span>🕒 Il y a 2 jours</span>
-            <span>•</span>
-            <span>Rythme 3 sem / 1 sem</span>
-          </div>
-          <p class="offer-desc">
-            Intégrez l'équipe Compute pour concevoir les portails d'administration interne. Architecture microservices moderne...
-          </p>
-        </div>
-
-        <div class="tech-tags-list">
-          <span class="tech-tag">React</span>
-          <span class="tech-tag">Node.js</span>
-          <span class="tech-tag">MongoDB</span>
-          <span class="tech-tag">TypeScript</span>
-        </div>
-
-        <div class="offer-card-footer">
-          <input type="checkbox" id="fav-1" class="bookmark-checkbox">
-          <label for="fav-1" class="bookmark-btn" title="Mettre en favori">
-            <svg style="width:18px;height:18px;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"/></svg>
-          </label>
-          <a href="offre-detail.html" class="btn btn-primary btn-sm">
-            Voir l'offre
-            <svg style="width:14px;height:14px;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
-          </a>
-        </div>
-      </article>
-
-      <!-- Card 2: DoctoTech Solutions -->
-      <article class="offer-card">
-        <div class="offer-header">
-          <div class="company-meta">
-            <div class="company-logo-placeholder">img</div>
-            <div>
-              <h2 class="company-name">DoctoTech Solutions</h2>
-              <div class="location-text">📍 Lyon (Part-Dieu)</div>
-            </div>
-          </div>
-          <span class="badge badge-stage">Stage</span>
-        </div>
-
-        <div>
-          <h3 class="offer-title">Stage Frontend & BFF – React / Express</h3>
-          <div class="offer-details-row" style="margin-top:0.4rem; margin-bottom:0.6rem;">
-            <span>🕒 Il y a 1 jour</span>
-            <span>•</span>
-            <span>6 mois (Fév - Juil 2026)</span>
-          </div>
-          <p class="offer-desc">
-            Rejoignez notre squad télémédecine pour créer des dashboards praticiens haute réactivité. Focus sur la fluidité d'UI...
-          </p>
-        </div>
-
-        <div class="tech-tags-list">
-          <span class="tech-tag">React</span>
-          <span class="tech-tag">Express</span>
-          <span class="tech-tag">TypeScript</span>
-        </div>
-
-        <div class="offer-card-footer">
-          <input type="checkbox" id="fav-2" class="bookmark-checkbox">
-          <label for="fav-2" class="bookmark-btn" title="Mettre en favori">
-            <svg style="width:18px;height:18px;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"/></svg>
-          </label>
-          <a href="offre-detail.html" class="btn btn-primary btn-sm">
-            Voir l'offre
-            <svg style="width:14px;height:14px;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
-          </a>
-        </div>
-      </article>
-
-      <!-- Card 3: PayFlow Analytics -->
-      <article class="offer-card">
-        <div class="offer-header">
-          <div class="company-meta">
-            <div class="company-logo-placeholder">img</div>
-            <div>
-              <h2 class="company-name">PayFlow Analytics</h2>
-              <div class="location-text">📍 100% Télétravail</div>
-            </div>
-          </div>
-          <span class="badge badge-alternance">Alternance</span>
-        </div>
-
-        <div>
-          <h3 class="offer-title">Ingénieur Backend Node.js / MongoDB</h3>
-          <div class="offer-details-row" style="margin-top:0.4rem; margin-bottom:0.6rem;">
-            <span>🕒 Il y a 3 jours</span>
-            <span>•</span>
-            <span>Contrat 24 mois</span>
-          </div>
-          <p class="offer-desc">
-            Optimisation de pipelines d'agrégation MongoDB pour le traitement de flux bancaires temps-réel. Maintenance d'APIs...
-          </p>
-        </div>
-
-        <div class="tech-tags-list">
-          <span class="tech-tag">Node.js</span>
-          <span class="tech-tag">MongoDB</span>
-          <span class="tech-tag">Express</span>
-        </div>
-
-        <div class="offer-card-footer">
-          <input type="checkbox" id="fav-3" class="bookmark-checkbox">
-          <label for="fav-3" class="bookmark-btn" title="Mettre en favori">
-            <svg style="width:18px;height:18px;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"/></svg>
-          </label>
-          <a href="offre-detail.html" class="btn btn-primary btn-sm">
-            Voir l'offre
-            <svg style="width:14px;height:14px;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
-          </a>
-        </div>
-      </article>
-
-      <!-- Card 4: GreenPulse Studio -->
-      <article class="offer-card">
-        <div class="offer-header">
-          <div class="company-meta">
-            <div class="company-logo-placeholder">img</div>
-            <div>
-              <h2 class="company-name">GreenPulse Studio</h2>
-              <div class="location-text">📍 Nantes (Île de Nantes)</div>
-            </div>
-          </div>
-          <span class="badge badge-stage">Stage</span>
-        </div>
-
-        <div>
-          <h3 class="offer-title">Stage Développeur MERN – Bilan Carbone SaaS</h3>
-          <div class="offer-details-row" style="margin-top:0.4rem; margin-bottom:0.6rem;">
-            <span>🕒 Il y a 4 jours</span>
-            <span>•</span>
-            <span>6 mois (PFE)</span>
-          </div>
-          <p class="offer-desc">
-            Participation active au sprint de lancement de la v2. Développement de data-visualisations en React et endpoints...
-          </p>
-        </div>
-
-        <div class="tech-tags-list">
-          <span class="tech-tag">React</span>
-          <span class="tech-tag">Node.js</span>
-          <span class="tech-tag">MongoDB</span>
-        </div>
-
-        <div class="offer-card-footer">
-          <input type="checkbox" id="fav-4" class="bookmark-checkbox">
-          <label for="fav-4" class="bookmark-btn" title="Mettre en favori">
-            <svg style="width:18px;height:18px;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"/></svg>
-          </label>
-          <a href="offre-detail.html" class="btn btn-primary btn-sm">
-            Voir l'offre
-            <svg style="width:14px;height:14px;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
-          </a>
-        </div>
-      </article>
-
-      <!-- Card 5: Nexus Interactive -->
-      <article class="offer-card">
-        <div class="offer-header">
-          <div class="company-meta">
-            <div class="company-logo-placeholder">img</div>
-            <div>
-              <h2 class="company-name">Nexus Interactive</h2>
-              <div class="location-text">📍 Paris (Sentier)</div>
-            </div>
-          </div>
-          <span class="badge badge-alternance">Alternance</span>
-        </div>
-
-        <div>
-          <h3 class="offer-title">Alternant Web Application Engineer (MERN)</h3>
-          <div class="offer-details-row" style="margin-top:0.4rem; margin-bottom:0.6rem;">
-            <span>🕒 Il y a 5 jours</span>
-            <span>•</span>
-            <span>12 à 24 mois</span>
-          </div>
-          <p class="offer-desc">
-            Construction d'interfaces collaboratives temps réel basées sur WebSockets, React 19 et serveurs Node.js haute scalabilité...
-          </p>
-        </div>
-
-        <div class="tech-tags-list">
-          <span class="tech-tag">React</span>
-          <span class="tech-tag">TypeScript</span>
-          <span class="tech-tag">Express</span>
-        </div>
-
-        <div class="offer-card-footer">
-          <input type="checkbox" id="fav-5" class="bookmark-checkbox">
-          <label for="fav-5" class="bookmark-btn" title="Mettre en favori">
-            <svg style="width:18px;height:18px;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"/></svg>
-          </label>
-          <a href="offre-detail.html" class="btn btn-primary btn-sm">
-            Voir l'offre
-            <svg style="width:14px;height:14px;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
-          </a>
-        </div>
-      </article>
-
-      <!-- Card 6: Kalygo Smart Robotics -->
-      <article class="offer-card">
-        <div class="offer-header">
-          <div class="company-meta">
-            <div class="company-logo-placeholder">img</div>
-            <div>
-              <h2 class="company-name">Kalygo Smart Robotics</h2>
-              <div class="location-text">📍 Lyon (Confluence)</div>
-            </div>
-          </div>
-          <span class="badge badge-alternance">Alternance</span>
-        </div>
-
-        <div>
-          <h3 class="offer-title">Apprenti Développeur Logiciel MERN & IoT</h3>
-          <div class="offer-details-row" style="margin-top:0.4rem; margin-bottom:0.6rem;">
-            <span>🕒 Il y a 6 jours</span>
-            <span>•</span>
-            <span>Contrat d'apprentissage</span>
-          </div>
-          <p class="offer-desc">
-            Déploiement d'interfaces d'opérateurs pour le monitoring de flottes d'AGV autonomes. Architecture réactive MERN...
-          </p>
-        </div>
-
-        <div class="tech-tags-list">
-          <span class="tech-tag">React</span>
-          <span class="tech-tag">Node.js</span>
-          <span class="tech-tag">TypeScript</span>
-        </div>
-
-        <div class="offer-card-footer">
-          <input type="checkbox" id="fav-6" class="bookmark-checkbox">
-          <label for="fav-6" class="bookmark-btn" title="Mettre en favori">
-            <svg style="width:18px;height:18px;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"/></svg>
-          </label>
-          <a href="offre-detail.html" class="btn btn-primary btn-sm">
-            Voir l'offre
-            <svg style="width:14px;height:14px;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
-          </a>
-        </div>
-      </article>
-
-    </section>
+    <!-- Offers are created from data/offers.json by js/app.js -->
+    <section class="offers-grid" aria-live="polite"></section>
 
     <!-- Bottom Info CTA Banner -->
     <section class="cta-banner">
@@ -453,5 +192,6 @@
 
   </main>
 
+  <script type="module" src="js/app.js"></script>
 </body>
 </html>
