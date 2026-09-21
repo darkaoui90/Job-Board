@@ -1,5 +1,6 @@
 import { fetchOffers } from "./data.js";
 import { renderOffers } from "./render.js";
+import { getFollowedOfferIds, toggleFollowedOffer } from "./storage.js";
 
 let allOffers = [];
 let sortOrder = "newest";
@@ -47,12 +48,25 @@ function showFilteredOffers() {
 }
 
 function updateContractCounts() {
-  const stageCount = allOffers.filter(offer => offer.typeContrat === "Stage").length;
-  const alternanceCount = allOffers.filter(offer => offer.typeContrat === "Alternance").length;
+  const contractCounts = allOffers.reduce((counts, offer) => {
+    counts[offer.typeContrat] = (counts[offer.typeContrat] || 0) + 1;
+    return counts;
+  }, {});
+
+  const stageCount = contractCounts.Stage || 0;
+  const alternanceCount = contractCounts.Alternance || 0;
 
   document.querySelector('label[for="c-all"]').textContent = `Tous (${allOffers.length})`;
   document.querySelector('label[for="c-stage"]').textContent = `Stage (${stageCount})`;
   document.querySelector('label[for="c-alternance"]').textContent = `Alternance (${alternanceCount})`;
+}
+
+function updateFollowedCount() {
+  const followedCount = getFollowedOfferIds().length;
+
+  document.querySelectorAll("[data-followed-count]").forEach(badge => {
+    badge.textContent = followedCount;
+  });
 }
 
 filterForm.addEventListener("input", showFilteredOffers);
@@ -75,12 +89,26 @@ sortButtons.forEach((button, index) => {
   });
 });
 
+// Event delegation keeps the bookmark listener working after cards are rendered again by filters.
+offersContainer.addEventListener("change", event => {
+  if (!event.target.matches(".bookmark-checkbox")) {
+    return;
+  }
+
+  const offerCard = event.target.closest(".offer-card");
+  const offerId = Number(offerCard.dataset.id);
+
+  toggleFollowedOffer(offerId);
+  updateFollowedCount();
+});
+
 async function loadOffers() {
   try {
     offersContainer.innerHTML = `<p class="loading-state">Chargement des offres en cours...</p>`;
 
     allOffers = await fetchOffers();
     updateContractCounts();
+    updateFollowedCount();
     showFilteredOffers();
   } catch (error) {
     offersContainer.innerHTML = `

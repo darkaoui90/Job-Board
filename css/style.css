@@ -636,6 +636,46 @@ img {
   margin-bottom: 2rem;
 }
 
+.empty-state {
+  grid-column: 1 / -1;
+  padding: 2rem;
+  border: 1px dashed var(--border-color);
+  border-radius: var(--radius-lg);
+  color: var(--text-muted);
+  text-align: center;
+}
+
+.followed-controls,
+.followed-help {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.followed-controls p,
+.followed-help p {
+  color: var(--text-muted);
+  font-size: 0.8125rem;
+}
+
+.followed-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.followed-actions label {
+  color: var(--text-muted);
+  font-size: 0.8125rem;
+}
+
+.followed-help h2 {
+  margin-bottom: 0.375rem;
+  font-size: 0.9375rem;
+}
+
 .offer-card {
   background-color: var(--surface);
   border: 1px solid var(--border-color);
@@ -1316,6 +1356,13 @@ textarea.input-control {
 
   .offers-grid {
     grid-template-columns: 1fr;
+  }
+
+  .followed-controls,
+  .followed-help,
+  .followed-actions {
+    align-items: flex-start;
+    flex-direction: column;
   }
 
   .radio-group {
