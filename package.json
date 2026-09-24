@@ -1,0 +1,36 @@
+{
+  "name": "jobboard",
+  "version": "1.0.0",
+  "description": "Application dynamique responsive d'un portail de stages et d'alternances. Le projet charge les offres depuis un fichier JSON puis les affiche, filtre, trie et sauvegarde côté navigateur.",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "start" : "node server.js" , 
+    "dev"   : "nodemon server.js" , 
+    "db:seed" : "node database/seed.js",
+    "db:reset": "node database/reset.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/darkaoui90/Job-Board.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/darkaoui90/Job-Board/issues"
+  },
+  "homepage": "https://github.com/darkaoui90/Job-Board#readme",
+  "dependencies": {
+    "dotenv": "^18.0.2",
+    "ejs": "^6.0.1",
+    "express": "^5.2.1",
+    "mysql2": "^3.24.4"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}
