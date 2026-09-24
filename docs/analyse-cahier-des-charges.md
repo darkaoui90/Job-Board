@@ -2,7 +2,7 @@
 
 ## 1. Reformulation du besoin
 
-Le produit est un portail responsive qui centralise des offres de stage et d'alternance. Le candidat découvre, consulte et suit des opportunités. Le recruteur prépare le dépôt d'une offre. L'administrateur dispose d'une vue minimale de modération. Le brief livre le cadrage, le backlog, les maquettes et les écrans statiques servant de base aux futurs briefs JavaScript puis Express/EJS/MySQL.
+/*
 
 ## 2. Utilisateurs et parcours
 
