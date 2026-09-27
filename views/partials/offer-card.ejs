@@ -1,0 +1,28 @@
+<article class="offer-card" data-offer-id="<%= offer.id %>">
+  <div class="offer-card-top">
+    <span class="badge <%= offer.type_contrat === 'Stage' ? 'badge-stage' : 'badge-alternance' %>">
+      <%= offer.type_contrat %>
+    </span>
+    <button type="button" class="bookmark-button" data-favorite-id="<%= offer.id %>" aria-label="Suivre cette offre">?</button>
+  </div>
+  <div class="company-meta">
+    <div class="company-logo-placeholder"><%= offer.nom_entreprise.charAt(0) %></div>
+    <div>
+      <div class="company-name"><%= offer.nom_entreprise %></div>
+      <small><%= offer.ville %></small>
+    </div>
+  </div>
+  <h2 class="offer-title"><a href="/offres/<%= offer.id %>"><%= offer.titre %></a></h2>
+  <p class="offer-summary"><%= offer.description_courte %></p>
+  <div class="tech-tags-list">
+    <% if (offer.technologies) { %>
+      <% offer.technologies.split(', ').forEach(function (technology) { %>
+        <span class="tech-tag"><%= technology %></span>
+      <% }); %>
+    <% } %>
+  </div>
+  <div class="offer-card-footer">
+    <span>Publi‚ le <%= new Date(offer.date_publication).toLocaleDateString('fr-FR') %></span>
+    <a class="btn btn-outline btn-sm" href="/offres/<%= offer.id %>">Voir l'offre</a>
+  </div>
+</article>
