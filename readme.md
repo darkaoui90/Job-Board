@@ -1,66 +1,105 @@
 ﻿# JobBoard — Stages & Alternances
 
-Application dynamique responsive d'un portail de stages et d'alternances. Le projet charge les offres depuis un fichier JSON puis les affiche, filtre, trie et sauvegarde côté navigateur.
+Application full-stack simple réalisée avec Node.js, Express, EJS et MySQL. Les visiteurs peuvent rechercher, filtrer, trier et suivre des offres. L'administration permet de créer, modifier et supprimer les offres ainsi que leurs technologies.
 
-## Pages
+## Prérequis
 
-- `index.html` : liste dynamique, recherche, filtres, tri et favoris.
-- `offre-detail.html` : détail d'une offre.
-- `deposer-offre.html` : dépôt statique.
-- `offres-suivies.html` : offres suivies sauvegardées dans le navigateur.
-- `admin.html` : back-office minimal.
+- Node.js 18 ou plus récent
+- MySQL 8 (MySQL de Laragon convient)
+- npm
 
-## Lancement
+## Installation
 
-Aucune installation n'est nécessaire. L'application doit être lancée avec un serveur local car `fetch()` ne peut pas charger correctement le fichier JSON depuis `file://`.
-
-Depuis la racine du projet :
+1. Cloner le dépôt puis ouvrir un terminal dans le dossier.
+2. Installer les dépendances :
 
 ```bash
-python3 -m http.server 8000
+npm install
 ```
 
-Puis ouvrir `http://localhost:8000` dans le navigateur.
+3. Copier `.env.example` vers `.env` et adapter les identifiants MySQL :
 
-## Fonctionnement JavaScript
-
-- `data/offers.json` contient les 12 offres utilisées par l'application.
-- `js/data.js` utilise `fetch()` et `async/await` pour charger les données.
-- `js/app.js` applique la recherche, les filtres combinables et le tri par date avant de demander à `js/render.js` de créer les cartes dans le DOM.
-- `js/storage.js` utilise `localStorage`, `JSON.stringify()` et `JSON.parse()` pour conserver uniquement les identifiants des offres suivies.
-- `js/followed.js` recharge le JSON, retrouve les identifiants sauvegardés et affiche les offres suivies sur `offres-suivies.html`.
-
-Les favoris sont conservés sous la clé `followedOffers`. Exemple de valeur stockée :
-
-```json
-[2, 7, 10]
+```env
+PORT=3000
+DB_HOST=localhost
+DB_PORT=3306
+DB_USER=root
+DB_PASSWORD=
+DB_NAME=jobboard_db
 ```
 
-Supprimer un favori ou utiliser « Tout effacer » met immédiatement à jour `localStorage` et le compteur affiché.
+4. Créer une base propre, ses tables et les données de démonstration :
+
+```bash
+npm run db:reset
+```
+
+5. Démarrer l'application :
+
+```bash
+npm run dev
+```
+
+Ouvrir ensuite http://localhost:3000.
+
+## Scripts npm
+
+- `npm start` : démarre le serveur avec Node.js.
+- `npm run dev` : démarre le serveur avec redémarrage automatique.
+- `npm run db:seed` : vide les quatre tables puis insère 5 entreprises, 8 technologies et 12 offres.
+- `npm run db:reset` : supprime et recrée la base indiquée par `DB_NAME`, exécute `database/schema.sql`, puis lance le seeder. Attention : les données de cette base sont supprimées.
+
+## Fonctionnalités
+
+### Partie publique
+
+- liste des offres provenant de MySQL ;
+- détail d'une offre ;
+- recherche par titre, description, entreprise ou technologie ;
+- filtres par ville, contrat et technologie ;
+- tri par date, du plus récent au plus ancien ou l'inverse ;
+- offres suivies dans `localStorage`.
+
+### Administration
+
+- liste de toutes les offres ;
+- création et modification avec entreprise et technologies ;
+- suppression avec confirmation ;
+- messages après les opérations.
+
+Le brief ne demande pas d'authentification : les routes `/admin/offres` sont donc volontairement publiques.
+
+## Organisation
+
+```text
+config/                 connexion MySQL partagée
+repositories/           requêtes SQL
+views/                   pages et partials EJS
+public/                  CSS et JavaScript navigateur
+database/schema.sql      structure relationnelle
+database/seed.js         données de démonstration
+database/reset.js        recréation complète
+docs/conception.md       diagrammes et modèle logique
+server.js                routes Express
+```
+
+Le flux principal est : route Express → repository → MySQL → vue EJS. Les valeurs reçues dans les formulaires et les filtres sont envoyées à MySQL avec des placeholders `?`. Le sens du tri n'est pas une valeur SQL libre : il est choisi entre `ASC` et `DESC` dans le code.
+
+## Routes principales
+
+| Méthode | URL | Rôle |
+|---|---|---|
+| GET | `/` | liste, recherche, filtres et tri |
+| GET | `/offres/:id` | détail |
+| GET | `/suivies` | favoris du navigateur |
+| GET | `/admin/offres` | liste d'administration |
+| GET/POST | `/admin/offres/nouvelle`, `/admin/offres` | formulaire et création |
+| GET/POST | `/admin/offres/:id/modifier` | formulaire et modification |
+| POST | `/admin/offres/:id/supprimer` | suppression |
 
 ## Documentation
 
+- [Conception et diagrammes](docs/conception.md)
 - [Analyse du cahier des charges](docs/analyse-cahier-des-charges.md)
 - [Backlog Jira](docs/jira-export.md)
-- [Maquettes Figma](docs/figma-link.md)
-
-## Technique et périmètre
-
-HTML5 sémantique, CSS natif avec variables, Flexbox, Grid et media queries, et JavaScript natif avec modules ES. Ce brief n'inclut ni authentification, backend, base de données, API, upload, paiement ou framework front-end.
-
-## Branches
-
-- `main` : version stable.
-- `brief-1/project-docs` : cadrage et documentation.
-- `brief-1/public-pages` : écrans publics.
-- `brief-1/forms-responsive` : formulaires et responsive.
-
-## État
-
-- [x] Analyse, utilisateurs, parcours, arborescence et backlog cible
-- [x] Liens Jira et Figma
-- [x] Liste, détail, dépôt, suivies et back-office
-- [x] Navigation responsive
-- [x] Chargement JSON, rendu dynamique, recherche, filtres et tri
-- [x] Offres suivies avec `localStorage`
-- [ ] Express/EJS/MySQL (brief ultérieur)
+- [Lien Figma](docs/figma-link.md)
