@@ -1,0 +1,62 @@
+﻿<%- include('partials/header', { title: 'Offres', page: page }) %>
+
+<section class="telemetry-banner">
+  <div class="telemetry-title-area">
+    <span class="sub-label"><span class="dot dot-teal"></span> Opportunités en direct</span>
+    <h1>Portail Stages & Alternances</h1>
+    <p>Découvrez les opportunités disponibles pour la promotion MERN 2026/2027.</p>
+  </div>
+</section>
+
+<section class="filter-card">
+  <form action="/" method="get">
+    <div class="search-row">
+      <div class="search-input-wrapper">
+        <span class="search-icon">⌕</span>
+        <input class="search-input" type="search" name="q" value="<%= filters.q %>" placeholder="Poste, entreprise, technologie...">
+      </div>
+      <button class="btn btn-primary" type="submit">Rechercher</button>
+      <a class="btn btn-outline" href="/">Réinitialiser</a>
+    </div>
+    <div class="filter-options-row">
+      <div class="select-filters">
+        <select class="custom-select" name="contrat">
+          <option value="">Tous les contrats</option>
+          <option value="Stage" <%= filters.contrat === 'Stage' ? 'selected' : '' %>>Stage</option>
+          <option value="Alternance" <%= filters.contrat === 'Alternance' ? 'selected' : '' %>>Alternance</option>
+        </select>
+        <select class="custom-select" name="ville">
+          <option value="">Toutes les villes</option>
+          <% cities.forEach(function (city) { %>
+            <option value="<%= city %>" <%= filters.ville === city ? 'selected' : '' %>><%= city %></option>
+          <% }); %>
+        </select>
+        <select class="custom-select" name="technologie">
+          <option value="">Toutes les technologies</option>
+          <% technologies.forEach(function (technology) { %>
+            <option value="<%= technology.id %>" <%= Number(filters.technologie) === technology.id ? 'selected' : '' %>><%= technology.nom %></option>
+          <% }); %>
+        </select>
+        <select class="custom-select" name="tri">
+          <option value="recent" <%= filters.tri === 'recent' ? 'selected' : '' %>>Plus récentes</option>
+          <option value="ancien" <%= filters.tri === 'ancien' ? 'selected' : '' %>>Plus anciennes</option>
+        </select>
+        <button class="btn btn-outline" type="submit">Appliquer</button>
+      </div>
+    </div>
+  </form>
+</section>
+
+<div class="results-meta-bar">
+  <div class="results-count"><strong><%= offers.length %></strong> offre(s) trouvée(s)</div>
+</div>
+
+<section class="offers-grid">
+  <% offers.forEach(function (offer) { %>
+    <%- include('partials/offer-card', { offer: offer }) %>
+  <% }); %>
+</section>
+<% if (offers.length === 0) { %><p class="empty-state">Aucune offre ne correspond à ces critères.</p><% } %>
+
+<%- include('partials/footer') %>
+

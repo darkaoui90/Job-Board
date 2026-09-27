@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= title %> | JobBoard MERN</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="navbar">
+    <div class="navbar-container">
+      <a href="/" class="brand-logo">◈ MERN 2026/2027</a>
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="/" class="nav-link <%= page === 'offers' ? 'active' : '' %>">Offres</a></li>
+          <li><a href="/suivies" class="nav-link <%= page === 'followed' ? 'active' : '' %>">Suivies <span class="nav-badge" data-followed-count>0</span></a></li>
+          <li><a href="/admin/offres/nouvelle" class="nav-link">Déposer</a></li>
+          <li><a href="/admin/offres" class="nav-link <%= page === 'admin' ? 'active' : '' %>">Admin</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main class="container">
+

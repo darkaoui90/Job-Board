@@ -1,0 +1,21 @@
+<%- include('partials/header', { title: 'Offres suivies', page: page }) %>
+
+<section class="page-title-banner">
+  <span class="sub">Ma selection</span>
+  <h1>Offres suivies <span class="nav-badge" data-followed-count>0</span></h1>
+  <p>Ces offres sont enregistrees uniquement dans votre navigateur.</p>
+</section>
+
+<div class="followed-actions">
+  <a href="/" class="btn btn-outline">Voir toutes les offres</a>
+  <button type="button" class="btn btn-danger" data-clear-favorites>Tout effacer</button>
+</div>
+
+<section class="offers-grid" data-followed-list>
+  <% offers.forEach(function (offer) { %>
+    <%- include('partials/offer-card', { offer: offer }) %>
+  <% }); %>
+</section>
+<p class="empty-state" data-followed-empty hidden>Aucune offre suivie pour le moment.</p>
+
+<%- include('partials/footer') %>

@@ -1,0 +1,37 @@
+<%- include('../partials/header', { title: 'Administration', page: page }) %>
+
+<div class="page-heading">
+  <div>
+    <span class="sub">Back-office</span>
+    <h1>Gestion des offres</h1>
+    <p><%= offers.length %> offre(s) dans la base de donn‚es.</p>
+  </div>
+  <a href="/admin/offres/nouvelle" class="btn btn-primary">+ Nouvelle offre</a>
+</div>
+
+<% if (message) { %><p class="alert alert-success"><%= message %></p><% } %>
+
+<section>
+  <% offers.forEach(function (offer) { %>
+    <article class="admin-offer-card">
+      <div>
+        <span class="badge <%= offer.type_contrat === 'Stage' ? 'badge-stage' : 'badge-alternance' %>"><%= offer.type_contrat %></span>
+        <h2><%= offer.titre %></h2>
+        <p><strong><%= offer.nom_entreprise %></strong> ú <%= offer.ville %></p>
+      </div>
+      <div class="admin-card-actions">
+        <span>Publi‚ le <%= new Date(offer.date_publication).toLocaleDateString('fr-FR') %></span>
+        <div class="admin-buttons">
+          <a href="/offres/<%= offer.id %>" class="btn btn-outline btn-sm">Voir</a>
+          <a href="/admin/offres/<%= offer.id %>/modifier" class="btn btn-outline btn-sm">Modifier</a>
+          <form action="/admin/offres/<%= offer.id %>/supprimer" method="post" data-delete-form>
+            <button type="submit" class="btn btn-danger btn-sm">Supprimer</button>
+          </form>
+        </div>
+      </div>
+    </article>
+  <% }); %>
+</section>
+
+<script src="/js/admin.js"></script>
+<%- include('../partials/footer') %>
