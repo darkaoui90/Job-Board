@@ -1,0 +1,47 @@
+<%- include('partials/header', { title: offer.titre, page: page }) %>
+
+<div class="detail-actions-top">
+  <a href="/" class="btn btn-outline"> Retour aux offres</a>
+  <button type="button" class="btn btn-outline bookmark-button" data-favorite-id="<%= offer.id %>">? Suivre</button>
+</div>
+
+<div class="detail-layout">
+  <section class="detail-main">
+    <article class="card detail-header-card">
+      <span class="badge <%= offer.type_contrat === 'Stage' ? 'badge-stage' : 'badge-alternance' %>"><%= offer.type_contrat %></span>
+      <h1><%= offer.titre %></h1>
+      <div class="company-meta-lg">
+        <div class="company-logo-placeholder"><%= offer.nom_entreprise.charAt(0) %></div>
+        <div>
+          <strong><%= offer.nom_entreprise %></strong>
+          <div><%= offer.ville %></div>
+        </div>
+      </div>
+      <div class="tech-tags-list">
+        <% if (offer.technologies) { %>
+          <% offer.technologies.split(', ').forEach(function (technology) { %>
+            <span class="tech-tag"><%= technology %></span>
+          <% }); %>
+        <% } %>
+      </div>
+    </article>
+
+    <article class="card">
+      <h2>Description</h2>
+      <p><%= offer.description_longue || offer.description_courte %></p>
+    </article>
+  </section>
+
+  <aside>
+    <article class="card sidebar-card">
+      <h2>Informations</h2>
+      <div class="info-list">
+        <div><strong>Contrat</strong><br><%= offer.type_contrat %></div>
+        <div><strong>Ville</strong><br><%= offer.ville %></div>
+        <div><strong>Publication</strong><br><%= new Date(offer.date_publication).toLocaleDateString('fr-FR') %></div>
+      </div>
+    </article>
+  </aside>
+</div>
+
+<%- include('partials/footer') %>
